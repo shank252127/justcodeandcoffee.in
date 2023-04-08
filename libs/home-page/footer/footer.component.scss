@@ -1,0 +1,40 @@
+@import 'global-styles/global.scss';
+// Desktop
+.footer{
+    width: 100%;
+    background-color: $color-white;
+    padding: 16px;
+    font-family: $font-family-poppin, $font-family-sans-sarif;
+    background-color: $color-black;
+    color: $color-white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    font-size: $font-size-large;
+    font-weight: $font-weight-large;
+    &-copyright{
+        flex-basis: 50%;
+    }
+    &-links{
+        flex-basis: 20%;
+        .footer-option{
+            display: flex;
+            padding: 0;
+            margin: 0;
+            justify-content: space-around;
+        li{
+            list-style-type: none;
+            a{
+                text-decoration: none;
+                color: $color-white;
+            }
+            a:hover{                  
+                    color: $color-link;
+            }
+        }
+        }
+            
+    }
+}

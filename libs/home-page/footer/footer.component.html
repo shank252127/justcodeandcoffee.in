@@ -1,1 +1,12 @@
-<p>footer works!</p>
+<footer class="footer">
+    <div class="footer-copyright">
+        <span>{{footerData.COPYRIGHT_ONE}} &#169; {{footerData.COPYRIGHT_TWO}} </span>
+    </div>
+    <div class="footer-links">
+        <ul class="footer-option">
+            <li *ngFor="let link of footerData.SOCIAL_LINKS;">
+                <a href="#">{{link}}</a>
+            </li>
+        </ul>
+    </div>
+</footer>
