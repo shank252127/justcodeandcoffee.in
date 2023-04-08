@@ -1,6 +1,8 @@
 @import 'global-styles/global.scss';
 // Desktop
 .footer{
+    position: absolute;
+    bottom: 0;
     width: 100%;
     background-color: $color-white;
     padding: 16px;
