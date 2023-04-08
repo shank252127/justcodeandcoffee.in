@@ -1,0 +1,21 @@
+<nav class="nav">
+    <div class="header">
+        <!-- Left Hand Side -->
+        <div class="header-left-side">
+            <div class="header-logo">
+                <img [src]="headerData.LEFT_SIDE_MENU.LOGO_IMG" alt="app logo">
+            </div>
+            <div class="header-text">
+                <span>{{headerData.LEFT_SIDE_MENU.APP_TITLE}}</span>
+            </div>
+        </div>
+        <!-- Right Hand Side -->
+        <div class="header-right-side">
+            <ul class="header-menu">
+                <li class="header" *ngFor="let menu of headerData.RIGHT_SIDE_MENU;">
+                    {{menu}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
