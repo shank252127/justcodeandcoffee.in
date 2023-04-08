@@ -4,14 +4,23 @@
     font-family: 'Poppins';
     src: url('./Poppins-Regular.ttf');
 }
+
+$font-family-poppin : 'Poppins';
+$font-family-sans-sarif : sans-serif;
+
 // Color
 $color-white : #ffffff;
 $color-black : #000000;
 $color-link : #0078d6;
 
 // Font-size
+$font-size-header:1.5rem; //24px;
+$font-size-large:1rem; //16px;
+$font-size-normal:0.75rem; //12px;
 
-
+// Font-weight
+$font-weight-extra-large : 700;
+$font-weight-large : 600;
 
 // Heights
 $header-height:56px;

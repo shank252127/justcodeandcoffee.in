@@ -6,7 +6,7 @@
     background-color: $color-white;
     box-shadow: 0 0 10px rgba(0,0,0,.09);
     padding: 8px;
-    font-family: 'Poppins', sans-serif;
+    font-family: $font-family-poppin, $font-family-sans-sarif;
     color: $color-black;
     display: flex;
     flex-direction: row;
@@ -14,8 +14,8 @@
     align-items: center;
     height: auto;
     &-left-side{
-        font-size: 1.5rem;
-        font-weight: 700;
+        font-size: $font-size-header;
+        font-weight: $font-weight-extra-large;
         flex-basis: 30%;
         display: flex;
         flex-direction: row;
@@ -34,8 +34,8 @@
         }
     }
     &-right-side{
-        font-size: 1rem;
-        font-weight: 600;
+        font-size: $font-size-large;
+        font-weight: $font-weight-large;
         flex-basis: 40%;
         .header-menu{
             display: flex;
@@ -45,6 +45,13 @@
             li{
                 box-shadow: none;
                 list-style-type: none;
+                a{
+                    text-decoration: none;
+                    color: $color-black;
+                }
+                a:hover{                  
+                        color: $color-link;
+                }
             }
         }
     }
