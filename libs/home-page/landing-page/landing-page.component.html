@@ -2,7 +2,9 @@
 <app-header></app-header>
 <!-- Intro Section -->
 <div class="home-intro">
-    <h2>I am in progress</h2>
+    <div class="home-intro-image">
+        <img [src]="introSectionData.PROFILE_IMAGE" alt="profile-image">
+    </div>
     <div class="home-intro-profile">
         <div class="designation">
             {{introSectionData.PROFILE}}
@@ -17,9 +19,6 @@
                 </li>
             </ul>
         </div>
-    </div>
-    <div class="home-intro-image">
-        <img [src]="introSectionData.PROFILE_IMAGE" alt="profile-image">
     </div>
 </div>
 <!-- Footer -->

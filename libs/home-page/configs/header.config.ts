@@ -3,5 +3,5 @@ export const HEADER_DATA = {
     LOGO_IMG: 'assets/header_nav_logo.png',
     APP_TITLE: 'justCodeAndCoffee.in',
   },
-  RIGHT_SIDE_MENU: ['Home', 'About', 'Projects', 'Contact'],
+  RIGHT_SIDE_MENU: ['Home', 'About', 'Courses', 'Projects', 'Contact'],
 };
