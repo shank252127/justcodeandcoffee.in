@@ -5,13 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 //Feature Module;
 import { HomePageModule } from '../../libs/home-page/home-page.module';
+import { AboutModule } from 'libs/about/about.module';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HomePageModule, //Home Page - Includes Header + Main Section + Footer
+    HomePageModule, //Home Page - Includes Header + Main Section + Footer,
+    AboutModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

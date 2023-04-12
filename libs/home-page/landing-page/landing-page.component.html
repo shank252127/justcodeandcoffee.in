@@ -1,25 +1,6 @@
 <!-- Header -->
 <app-header></app-header>
 <!-- Intro Section -->
-<div class="home-intro">
-    <div class="home-intro-image">
-        <img [src]="introSectionData.PROFILE_IMAGE" alt="profile-image">
-    </div>
-    <div class="home-intro-profile">
-        <div class="designation">
-            {{introSectionData.PROFILE}}
-        </div>
-        <div class="intro">
-            {{introSectionData.INTRO}}
-        </div>
-        <div class="social-links">
-            <ul class="social-option">
-                <li *ngFor="let link of introSectionData.SOCIAL_LINKS;">
-                    <a href="#">{{link}}</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div>
+<app-about></app-about>
 <!-- Footer -->
 <app-footer></app-footer>
