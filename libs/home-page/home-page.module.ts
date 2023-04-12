@@ -3,12 +3,11 @@ import { CommonModule } from '@angular/common';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { AboutModule } from 'libs/about/about.module';
-//import { AboutModule } from 'libs/about/about.module';
+import { HomePageRoutingModule } from './home-page-routing.module';
 
 @NgModule({
   declarations: [LandingPageComponent, HeaderComponent, FooterComponent],
-  imports: [CommonModule, AboutModule],
+  imports: [CommonModule, HomePageRoutingModule],
   exports: [LandingPageComponent],
 })
 export class HomePageModule {}
