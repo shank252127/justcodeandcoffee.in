@@ -1,53 +1,107 @@
 @import "global-styles/global.scss";
 
-.home-intro {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 54px;
+.about-section {
+  margin: $margin-dektop;
   font-family: $font-family-poppin, $font-family-sans-sarif;
-  .home-intro-image {
-    -webkit-animation: morph 8s ease-in-out infinite;
-    animation: morph 8s ease-in-out infinite;
-    background-image: url($about-profile-pic);
-    background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border: 3px solid #2d2e32;
-    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
-    height: 20rem;
-    position: relative;
-    transition: all 1s ease-in-out;
-    width: 20rem;
-    margin-right: 5rem;
-  }
-  .home-intro-profile {
+  .home-intro {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    .home-intro-image {
+      -webkit-animation: morph 8s ease-in-out infinite;
+      animation: morph 8s ease-in-out infinite;
+      background-image: url($about-profile-pic);
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border: 3px solid #2d2e32;
+      border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+      height: 20rem;
+      position: relative;
+      transition: all 1s ease-in-out;
+      width: 20rem;
+      margin-right: 5rem;
+    }
+    .home-intro-profile {
+      display: flex;
+      flex-direction: column;
+      color: $color-black;
+      .designation {
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+      .intro {
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+      }
+      .social-option {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        font-weight: $font-weight-extra-large;
+        li {
+          list-style-type: none;
+          margin-right: 2rem;
+          a {
+            text-decoration: none;
+            color: $color-black;
+            fa-icon {
+              font-size: 24px; /* set the default size of the icon */
+            }
+          }
+          a:hover {
+            color: $color-link;
+          }
+        }
+      }
+    }
+  }
+  .tech {
+    display: flex;
+    margin-top: 56px;
     flex-direction: column;
-    color: $color-black;
-    .designation {
+    .tech-heading {
+      margin: auto;
       font-size: 2rem;
       font-weight: 700;
-      margin-bottom: 0.5rem;
     }
-    .intro {
-      margin-bottom: 0.5rem;
-      font-size: 1rem;
-    }
-    .social-option {
+    .tech-stack {
+      margin-top: 2rem;
       display: flex;
-      padding: 0;
-      margin: 0;
-      font-weight: $font-weight-extra-large;
-      li {
-        list-style-type: none;
-        margin-right: 2rem;
-        a {
-          text-decoration: none;
-          color: $color-black;
+      align-items: center;
+      justify-content: space-between;
+      .sub-heading {
+        flex-basis: 10%;
+        font-weight: $font-weight-regular;
+      }
+      .tech-list {
+        flex-basis: 90%;
+        display: flex;
+        padding: 0;
+        li {
+          list-style-type: none;
+          margin-right: 1rem;
+          height: 6rem;
+          margin: auto;
+          width: 6rem;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
+          transition: box-shadow 0.5s ease;
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .AngularJS {
+            position: relative;
+            top: 20px;
+          }
+          img {
+            height: 3.5rem;
+            width: 3.5rem;
+          }
         }
-        a:hover {
-          color: $color-link;
+        li:hover {
+          box-shadow: 0 0 10px rgba(0, 0, 0, 4.09);
         }
       }
     }
