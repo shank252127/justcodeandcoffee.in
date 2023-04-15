@@ -1,18 +1,24 @@
-<div class="home-intro">
-  <div class="home-intro-image"></div>
-  <div class="home-intro-profile">
-    <div class="designation">
-      {{ introSectionData.PROFILE }}
-    </div>
-    <div class="intro">
-      {{ introSectionData.INTRO }}
-    </div>
-    <div class="social-links">
-      <ul class="social-option">
-        <li *ngFor="let link of introSectionData.SOCIAL_LINKS">
-          <a href="#">{{ link }}</a>
-        </li>
-      </ul>
+<div class="about-section">
+  <!-- Intro Section -->
+  <div class="home-intro">
+    <div class="home-intro-image"></div>
+    <div class="home-intro-profile">
+      <div class="designation">
+        {{ introSectionData.PROFILE }}
+      </div>
+      <div class="intro">
+        {{ introSectionData.INTRO }}
+      </div>
+      <div class="social-links">
+        <ul class="social-option">
+          <li *ngFor="let link of introSectionData.SOCIAL_LINKS">
+            <a href="#">{{ link }}</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
+  <!-- Education and Experience -->
+  <div class="life-line"></div>
+  <!-- Knowledge -->
 </div>
