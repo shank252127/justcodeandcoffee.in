@@ -1,8 +1,10 @@
 @import "global-styles/global.scss";
 
 .about-section {
-  margin: $margin-dektop;
+  max-width: 80rem;
+  margin: 56px auto;
   font-family: $font-family-poppin, $font-family-sans-sarif;
+  // Intro Section;
   .home-intro {
     display: flex;
     align-items: center;
@@ -57,10 +59,12 @@
       }
     }
   }
+  // Tech Stack;
   .tech {
     display: flex;
-    margin-top: 56px;
+    margin: 56px auto;
     flex-direction: column;
+    justify-content: center;
     .tech-heading {
       margin: auto;
       font-size: 2rem;
@@ -70,13 +74,13 @@
       margin-top: 2rem;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       .sub-heading {
         flex-basis: 10%;
         font-weight: $font-weight-regular;
       }
       .tech-list {
-        flex-basis: 90%;
+        flex-basis: 70%;
         display: flex;
         padding: 0;
         li {
@@ -105,6 +109,9 @@
         }
       }
     }
+  }
+  // Education & Experience;
+  .ed-ex {
   }
 }
 

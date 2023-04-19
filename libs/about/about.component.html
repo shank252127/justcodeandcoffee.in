@@ -11,21 +11,18 @@
       </div>
       <div class="social-links">
         <ul class="social-option">
-          <li
-            *ngFor="
+          <li *ngFor="
               let link of introSectionData.SOCIAL_LINKS.PLATFORM;
               let i = index
-            "
-          >
-            <a [href]="introSectionData.SOCIAL_LINKS.LINKS[i]" target="_blank"
-              ><fa-icon [icon]="icons[link]"></fa-icon
-            ></a>
+            ">
+            <a [href]="introSectionData.SOCIAL_LINKS.LINKS[i]" target="_blank"><fa-icon
+                [icon]="icons[link]"></fa-icon></a>
           </li>
         </ul>
       </div>
     </div>
   </div>
-  <!-- Education and Experience -->
+  <!-- Knowledge -->
   <div class="tech">
     <div class="tech-heading">
       {{ introSectionData.TECH_STACK.HEADING }}
@@ -33,14 +30,12 @@
     <div class="tech-stack">
       <span class="sub-heading">{{
         introSectionData.TECH_STACK.SUB_HEADING_ONE
-      }}</span>
+        }}</span>
       <ul class="tech-list">
-        <li
-          *ngFor="
+        <li *ngFor="
             let img of introSectionData.TECH_STACK.SKILLED_IMG;
             let i = index
-          "
-        >
+          ">
           <img [src]="img" [alt]="introSectionData.TECH_STACK.SKILLED[i]" />
         </li>
       </ul>
@@ -48,22 +43,22 @@
     <div class="tech-stack">
       <span class="sub-heading">{{
         introSectionData.TECH_STACK.SUB_HEADING_TWO
-      }}</span>
+        }}</span>
       <ul class="tech-list">
-        <li
-          *ngFor="
+        <li *ngFor="
             let img of introSectionData.TECH_STACK.FAMILIAR_IMG;
             let i = index
-          "
-        >
-          <img
-            [src]="img"
-            [class]="introSectionData.TECH_STACK.FAMILIAR[i]"
-            [alt]="introSectionData.TECH_STACK.FAMILIAR[i]"
-          />
+          ">
+          <img [src]="img" [class]="introSectionData.TECH_STACK.FAMILIAR[i]"
+            [alt]="introSectionData.TECH_STACK.FAMILIAR[i]" />
         </li>
       </ul>
     </div>
   </div>
-  <!-- Knowledge -->
+  <!-- Education and Experience -->
+  <div class="ed-ex">
+    <div class="experience">
+
+    </div>
+  </div>
 </div>

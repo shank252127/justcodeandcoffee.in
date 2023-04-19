@@ -33,4 +33,18 @@ export const ABOUT_DATA = {
       'assets/mongodb.svg',
     ],
   },
+  EDUCATION: {
+    PLACE: [
+      `St. Mary's School`,
+      `St. Mary's School`,
+      'Pranveer Singh Institute of Technology',
+    ],
+    YEAR: ['2013', '2015', '2015-2019'],
+    SCORE: ['83%', '75%', '77% (Honors)'],
+    DEGREE: [
+      '<span>10<sup>th</sup></span>',
+      '<span>12<sup>th</sup></span>',
+      '<span>Bachelor in Technology</span>',
+    ],
+  },
 };
