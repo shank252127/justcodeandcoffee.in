@@ -33,8 +33,10 @@ export class AboutComponent implements OnInit {
   clicked(para: string): void {
     if (para === '0') {
       this.showExperience = !this.showExperience;
+      this.showEducation = false;
     } else if (para === '1') {
       this.showEducation = !this.showEducation;
+      this.showExperience = false;
     }
   }
 }
