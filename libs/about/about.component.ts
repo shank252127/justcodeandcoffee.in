@@ -14,6 +14,10 @@ import {
 })
 export class AboutComponent implements OnInit {
   introSectionData = ABOUT_DATA;
+  makeBtnActive = false;
+  makeTitleActive = false;
+  showExperience = false;
+  showEducation = false;
 
   //Icons;
   icons: any = {
@@ -25,4 +29,12 @@ export class AboutComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  clicked(para: string): void {
+    if (para === '0') {
+      this.showExperience = !this.showExperience;
+    } else if (para === '1') {
+      this.showEducation = !this.showEducation;
+    }
+  }
 }

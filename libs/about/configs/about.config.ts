@@ -33,18 +33,38 @@ export const ABOUT_DATA = {
       'assets/mongodb.svg',
     ],
   },
-  EDUCATION: {
-    PLACE: [
-      `St. Mary's School`,
-      `St. Mary's School`,
-      'Pranveer Singh Institute of Technology',
-    ],
-    YEAR: ['2013', '2015', '2015-2019'],
-    SCORE: ['83%', '75%', '77% (Honors)'],
-    DEGREE: [
-      '<span>10<sup>th</sup></span>',
-      '<span>12<sup>th</sup></span>',
-      '<span>Bachelor in Technology</span>',
-    ],
-  },
+  EDUCATION: [
+    {
+      NAME: 'Graduation - B.tech',
+      TIME_RANGE: '2015-2019',
+      DESIGNATION: 'Pranveer Singh Institute of Technology',
+      ROLE: 'Mechanical Engineering',
+    },
+    {
+      NAME: 'Senior Secondary School/12',
+      TIME_RANGE: '2015',
+      DESIGNATION: "St. Mary's School",
+      ROLE: '',
+    },
+    {
+      NAME: 'Secondary School/10',
+      TIME_RANGE: '2013',
+      DESIGNATION: "St. Mary's School",
+      ROLE: '',
+    },
+  ],
+  EXPERIENCE: [
+    {
+      NAME: 'Deloitte',
+      TIME_RANGE: 'October 2022 - Present',
+      DESIGNATION: 'Consultant',
+      ROLE: 'FrontEnd Developer',
+    },
+    {
+      NAME: 'Infosys',
+      TIME_RANGE: 'December 2019 - September 2022',
+      DESIGNATION: 'Senior System Engineer',
+      ROLE: 'FullStack',
+    },
+  ],
 };
