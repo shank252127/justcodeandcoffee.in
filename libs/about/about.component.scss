@@ -455,6 +455,9 @@ body {
   text-align: center;
   color: red;
 }
+.mobile-device-issue {
+  display: none;
+}
 
 @media screen and (max-width: 1024px) {
   .about-section {
