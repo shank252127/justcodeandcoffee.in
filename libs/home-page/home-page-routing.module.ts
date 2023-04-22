@@ -27,6 +27,7 @@ const routes: Routes = [
     redirectTo: 'about',
     pathMatch: 'full',
   },
+  { path: '**', redirectTo: 'about' },
 ];
 
 @NgModule({
