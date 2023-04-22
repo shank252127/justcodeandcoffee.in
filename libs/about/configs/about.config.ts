@@ -39,12 +39,14 @@ export const ABOUT_DATA = {
       TIME_RANGE: '2015-2019',
       DESIGNATION: 'Pranveer Singh Institute of Technology',
       ROLE: 'Mechanical Engineering',
+      IMG: 'assets/graduation.png',
     },
     {
       NAME: 'Senior Secondary School/12',
       TIME_RANGE: '2015',
       DESIGNATION: "St. Mary's School",
       ROLE: 'Science - PCM',
+      IMG: 'assets/school.png',
     },
   ],
   EXPERIENCE: [
@@ -53,12 +55,14 @@ export const ABOUT_DATA = {
       TIME_RANGE: 'October 2022 - Present',
       DESIGNATION: 'Consultant',
       ROLE: 'FrontEnd Developer',
+      IMG: 'assets/deloitte.jpg',
     },
     {
       NAME: 'Infosys',
       TIME_RANGE: 'December 2019 - September 2022',
       DESIGNATION: 'Senior System Engineer',
       ROLE: 'FullStack Developer',
+      IMG: 'assets/infosys.png',
     },
   ],
 };
