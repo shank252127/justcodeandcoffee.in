@@ -33,6 +33,14 @@ export const ABOUT_DATA = {
       'assets/mongodb.svg',
     ],
   },
+  ABOUT_ME: {
+    HEADING: 'About Me !!!',
+    SECTION_ED: 'Education',
+    SECTION_EX: 'Experience',
+    TESTIMONIAL:
+      'I am a highly skilled Frontend Developer with expertise in Angular, Javascript, Typescript, HTML, CSS, and SCSS. I have a strong understanding of web development, including backend processes, and have worked on complex data-driven projects throughout my career. My ability to create responsive and user-friendly web applications has helped me develop a reputation for delivering high-quality results.',
+  },
+
   EDUCATION: {
     IMAGE: ['assets/graduation.png', 'assets/school.png'],
     VAL: [

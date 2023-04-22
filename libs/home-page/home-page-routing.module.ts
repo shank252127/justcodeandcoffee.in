@@ -23,8 +23,8 @@ const routes: Routes = [
       import('../contact/contact.module').then((m) => m.ContactModule),
   },
   {
-    path: 'home',
-    redirectTo: '',
+    path: '',
+    redirectTo: 'about',
     pathMatch: 'full',
   },
 ];
