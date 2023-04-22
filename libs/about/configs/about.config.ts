@@ -52,7 +52,7 @@ export const ABOUT_DATA = {
   },
 
   EXPERIENCE: {
-    IMAGE: ['assets/deloitte.jpg', 'assets/infosys.png'],
+    IMAGE: ['assets/deloitte.jpg', 'assets/info.jpg'],
     VAL: [
       {
         NAME: 'Deloitte',
