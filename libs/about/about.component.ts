@@ -19,6 +19,8 @@ export class AboutComponent implements OnInit {
   showExperience = false;
   showEducation = false;
 
+  detailData: any;
+
   //Icons;
   icons: any = {
     linkedInIcon: faLinkedin,
@@ -32,11 +34,14 @@ export class AboutComponent implements OnInit {
 
   clicked(para: string): void {
     if (para === '0') {
+      this.detailData = this.introSectionData.EXPERIENCE;
       this.showExperience = !this.showExperience;
       this.showEducation = false;
     } else if (para === '1') {
+      this.detailData = this.introSectionData.EDUCATION;
       this.showEducation = !this.showEducation;
       this.showExperience = false;
     }
+    console.log(this.detailData);
   }
 }

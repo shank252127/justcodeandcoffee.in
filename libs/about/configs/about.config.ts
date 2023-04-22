@@ -44,7 +44,7 @@ export const ABOUT_DATA = {
       NAME: 'Senior Secondary School/12',
       TIME_RANGE: '2015',
       DESIGNATION: "St. Mary's School",
-      ROLE: '',
+      ROLE: 'Science - PCM',
     },
     {
       NAME: 'Secondary School/10',
@@ -64,7 +64,7 @@ export const ABOUT_DATA = {
       NAME: 'Infosys',
       TIME_RANGE: 'December 2019 - September 2022',
       DESIGNATION: 'Senior System Engineer',
-      ROLE: 'FullStack',
+      ROLE: 'FullStack Developer',
     },
   ],
 };
