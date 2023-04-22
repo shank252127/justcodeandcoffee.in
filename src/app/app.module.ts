@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 //Feature Module;
 import { HomePageModule } from '../../libs/home-page/home-page.module';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 //External Libraries;
 
@@ -15,7 +16,7 @@ import { HomePageModule } from '../../libs/home-page/home-page.module';
     AppRoutingModule,
     HomePageModule, //Home Page - Includes Header + Main Section + Footer,
   ],
-  providers: [],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
