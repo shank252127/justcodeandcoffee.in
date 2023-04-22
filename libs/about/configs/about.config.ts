@@ -33,36 +33,39 @@ export const ABOUT_DATA = {
       'assets/mongodb.svg',
     ],
   },
-  EDUCATION: [
-    {
-      NAME: 'Graduation - B.tech',
-      TIME_RANGE: '2015-2019',
-      DESIGNATION: 'Pranveer Singh Institute of Technology',
-      ROLE: 'Mechanical Engineering',
-      IMG: 'assets/graduation.png',
-    },
-    {
-      NAME: 'Senior Secondary School/12',
-      TIME_RANGE: '2015',
-      DESIGNATION: "St. Mary's School",
-      ROLE: 'Science - PCM',
-      IMG: 'assets/school.png',
-    },
-  ],
-  EXPERIENCE: [
-    {
-      NAME: 'Deloitte',
-      TIME_RANGE: 'October 2022 - Present',
-      DESIGNATION: 'Consultant',
-      ROLE: 'FrontEnd Developer',
-      IMG: 'assets/deloitte.jpg',
-    },
-    {
-      NAME: 'Infosys',
-      TIME_RANGE: 'December 2019 - September 2022',
-      DESIGNATION: 'Senior System Engineer',
-      ROLE: 'FullStack Developer',
-      IMG: 'assets/infosys.png',
-    },
-  ],
+  EDUCATION: {
+    IMAGE: ['assets/graduation.png', 'assets/school.png'],
+    VAL: [
+      {
+        QUALIFICATION: 'Graduation - B.tech',
+        YEAR: '2015-2019',
+        INSTITUE: 'PSIT - Kanpur',
+        AREA: 'Mechanical Engineering',
+      },
+      {
+        QUALIFICATION: 'Senior Secondary School/12',
+        YEAR: '2015',
+        INSTITUE: "St. Mary's School",
+        AREA: 'Science - PCM',
+      },
+    ],
+  },
+
+  EXPERIENCE: {
+    IMAGE: ['assets/deloitte.jpg', 'assets/infosys.png'],
+    VAL: [
+      {
+        NAME: 'Deloitte',
+        DURATION: 'Oct 2022 - Present',
+        DESIGNATION: 'Consultant',
+        ROLE: 'FrontEnd Developer',
+      },
+      {
+        NAME: 'Infosys',
+        DURATION: 'Dec 2019 - SepT 2022',
+        DESIGNATION: 'Senior System Engineer',
+        ROLE: 'FullStack Developer',
+      },
+    ],
+  },
 };

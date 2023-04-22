@@ -408,7 +408,10 @@ body {
       }
     }
 
-    a {
+    .ed-ex-list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       float: left;
       width: 100%;
       margin-top: 18px;
@@ -420,35 +423,36 @@ body {
       opacity: 0;
       @include transform(translateY(-10px));
       position: relative;
-
-      @media (min-width: 414px) {
-        padding: 18px 30px;
-      }
-
-      &.gmail {
-        .icon {
-          svg {
-            background-color: $gmail;
-          }
+      padding: 18px 30px;
+      .ed-ex-column {
+        flex-basis: 20%;
+        display: flex;
+        flex-direction: column;
+        .heading {
+          font-weight: 400;
+          font-size: 12px;
+          color: grey;
+        }
+        .value {
+          color: black;
+          font-size: 14px;
         }
       }
-
-      .icon {
+      .ed-ex-icon {
         float: left;
-        width: 50px;
-        height: 50px;
+        width: 70px;
+        height: 70px;
         border-radius: 50%;
         overflow: hidden;
         margin-right: 20px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
+        transition: box-shadow 0.5s ease;
 
-        svg {
+        img {
           width: 100%;
           height: 100%;
           padding: 14px;
-
-          path {
-            fill: $white;
-          }
         }
       }
     }
