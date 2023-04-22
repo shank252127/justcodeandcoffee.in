@@ -3,6 +3,9 @@ export const HEADER_DATA = {
     LOGO_IMG: 'assets/header_nav_logo.png',
     APP_TITLE: 'justCodeAndCoffee.in',
   },
-  RIGHT_SIDE_MENU: ['Home', 'Courses', 'Projects', 'About', 'Contact'],
-  ROUTER_LINK: ['home', 'courses', 'projects', 'about', 'contact'],
+  RIGHT_SIDE_MENU: ['About', 'Contact'],
+  ROUTER_LINK: ['about', 'contact'],
 };
+
+//  RIGHT_SIDE_MENU: ['Home', 'Courses', 'Projects', 'About', 'Contact'],
+// / ROUTER_LINK: ['home', 'courses', 'projects', 'about', 'contact'],

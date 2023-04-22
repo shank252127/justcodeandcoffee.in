@@ -57,55 +57,52 @@
   </div>
   <!-- Education and Experience -->
   <div class="ed-ex">
-
-    <div class="contact-area">
-      <div class="contact">
-        <main>
-          <section>
-            <div class="content">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/256492/_mLIxaKY_400x400.jpg" alt="Profile Image">
-
-              <aside>
-                <h1>Riccardo Cavallo</h1>
-                <p>Hi, I'm Riccardo Cavallo and I'm a Graphic and Visual Designer.</p>
-              </aside>
-
-              <button (click)="clicked('0')" class="btn-experience" [ngClass]="{'active-experience':showExperience}">
-                <span>Experience</span>
-
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
-                  <g class="nc-icon-wrapper" fill="#444444">
-                    <path d="M14.83 30.83L24 21.66l9.17 9.17L36 28 24 16 12 28z"></path>
-                  </g>
-                </svg>
-              </button>
-              <button (click)="clicked('1')" class="btn-education" [ngClass]="{'active-education':showEducation}">
-                <span>Education</span>
-
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
-                  <g class="nc-icon-wrapper" fill="#444444">
-                    <path d="M14.83 30.83L24 21.66l9.17 9.17L36 28 24 16 12 28z"></path>
-                  </g>
-                </svg>
-              </button>
+    <div class="contact">
+      <main>
+        <section>
+          <div class="content">
+            <div class="about-me">
+              <h1>{{introSectionData.ABOUT_ME.HEADING}}</h1>
+              <p>{{introSectionData.ABOUT_ME.TESTIMONIAL}}</p>
             </div>
 
-            <div class="title" [ngClass]="{'active-experience':showExperience,'active-education':showEducation}">
-              <p>{{showExperience?'Experience':'Education'}}</p>
-            </div>
-          </section>
+            <button (click)="clicked('0')" class="btn-experience" [ngClass]="{'active-experience':showExperience}">
+              <span>{{introSectionData.ABOUT_ME.SECTION_EX}}</span>
 
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                <g class="nc-icon-wrapper" fill="#444444">
+                  <path d="M14.83 30.83L24 21.66l9.17 9.17L36 28 24 16 12 28z"></path>
+                </g>
+              </svg>
+            </button>
+            <button (click)="clicked('1')" class="btn-education" [ngClass]="{'active-education':showEducation}">
+              <span>{{introSectionData.ABOUT_ME.SECTION_ED}}</span>
 
-        </main>
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                <g class="nc-icon-wrapper" fill="#444444">
+                  <path d="M14.83 30.83L24 21.66l9.17 9.17L36 28 24 16 12 28z"></path>
+                </g>
+              </svg>
+            </button>
+          </div>
 
-        <nav [ngClass]="{'active-education':showEducation, 'active-experience':showExperience }">
-          <ng-container [ngTemplateOutlet]="edExDetails">
-          </ng-container>
-        </nav>
-      </div>
+          <div class="title" [ngClass]="{'active-experience':showExperience,'active-education':showEducation}">
+            <p>{{showExperience?introSectionData.ABOUT_ME.SECTION_EX:introSectionData.ABOUT_ME.SECTION_ED}}</p>
+          </div>
+        </section>
+      </main>
+      <nav [ngClass]="{'active-education':showEducation, 'active-experience':showExperience }">
+        <ng-container [ngTemplateOutlet]="edExDetails">
+        </ng-container>
+      </nav>
     </div>
   </div>
+  <div class="warning">
+    <p>**This website is under - construction. I will keep adding more section in coming future.</p>
+    <p>Thanks for visiting !!!</p>
+  </div>
 </div>
+
 <ng-template #edExDetails let-edExData="edExData">
   <a href="#" class="ed-ex-list" *ngFor="let data of detailData?.VAL; let i = index;">
     <div class="ed-ex-icon">

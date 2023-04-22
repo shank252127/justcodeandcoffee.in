@@ -5,6 +5,7 @@ import {
   faInstagramSquare,
   faGithub,
   faLinkedin,
+  faConnectdevelop,
 } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
@@ -26,6 +27,7 @@ export class AboutComponent implements OnInit {
     linkedInIcon: faLinkedin,
     gitHubIcon: faGithub,
     instagramIcon: faInstagramSquare,
+    gmailIcon: faConnectdevelop,
   };
 
   constructor() {}
@@ -42,6 +44,5 @@ export class AboutComponent implements OnInit {
       this.showEducation = !this.showEducation;
       this.showExperience = false;
     }
-    console.log(this.detailData);
   }
 }
