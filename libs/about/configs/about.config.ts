@@ -46,12 +46,6 @@ export const ABOUT_DATA = {
       DESIGNATION: "St. Mary's School",
       ROLE: 'Science - PCM',
     },
-    {
-      NAME: 'Secondary School/10',
-      TIME_RANGE: '2013',
-      DESIGNATION: "St. Mary's School",
-      ROLE: '',
-    },
   ],
   EXPERIENCE: [
     {
