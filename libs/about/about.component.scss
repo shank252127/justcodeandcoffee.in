@@ -480,20 +480,89 @@ body {
       }
     }
     .tech {
-      margin-top: 36px;
+      margin: 36px 0;
+      .tech-heading {
+        line-height: 40.5px;
+      }
+      .tech-stack {
+        margin-top: 36px;
+        display: flex;
+        flex-direction: column;
+        .sub-heading {
+          margin-bottom: 18px;
+        }
+        .tech-list {
+          display: flex;
+          flex-wrap: wrap;
+          li {
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+    .ed-ex {
+      .contact {
+        padding: 0;
+        overflow: visible;
+        .content {
+          padding: 20px 20px 35px;
+          .about-me {
+            p {
+              letter-spacing: 0;
+            }
+          }
+          .btn-experience,
+          .btn-education {
+            width: 120px;
+            height: 42px;
+            margin-bottom: -16px;
+            span {
+              width: 120px;
+              padding: 0;
+            }
+            svg {
+              height: 30px;
+              width: 30px;
+            }
+          }
+          .btn-experience {
+            left: 8%;
+          }
+          .btn-education {
+            right: 35%;
+          }
+          .btn-education.active-education {
+            right: 7%;
+          }
+        }
+      }
+      .title {
+        p {
+          margin: 14px 14px 0;
+        }
+      }
+      .ed-ex-list {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        margin-top: 0;
+        div {
+          margin-bottom: 10px;
+        }
+      }
     }
   }
 }
 
-// /////warning
-// .warning {
-//   margin: 10%;
-//   text-align: center;
-//   color: red;
-// }
-// .mobile-device-issue {
-//   display: none;
-// }
+/////warning
+.warning {
+  margin: 10%;
+  text-align: center;
+  color: red;
+}
+.mobile-device-issue {
+  display: none;
+}
 
 // @media screen and (max-width: 1024px) {
 //   .about-section {
