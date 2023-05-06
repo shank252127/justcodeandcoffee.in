@@ -464,9 +464,23 @@ body {
         margin-bottom: 10px;
       }
       .home-intro-profile {
+        margin-top: 36px;
         align-items: center;
         text-align: center;
+        .designation {
+          line-height: 40.5px;
+        }
+        .social-option {
+          width: 60vw;
+          justify-content: space-between;
+          li {
+            margin-right: 0;
+          }
+        }
       }
+    }
+    .tech {
+      margin-top: 36px;
     }
   }
 }
