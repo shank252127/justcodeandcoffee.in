@@ -1,23 +1,23 @@
-// @import "global-styles/global.scss";
+@import "global-styles/global.scss";
 
-// .contact {
-//   margin: 10%;
-//   text-align: center;
+.contact {
+  margin: 10%;
+  text-align: center;
 
-//   .mail {
-//     font-weight: 500;
-//     font-size: 16px;
-//     span {
-//       font-weight: 700;
-//       cursor: pointer;
-//     }
-//     span:hover {
-//       color: $color-link;
-//     }
-//   }
+  .mail {
+    font-weight: 500;
+    font-size: 16px;
+    span {
+      font-weight: 700;
+      cursor: pointer;
+    }
+    span:hover {
+      color: $color-link;
+    }
+  }
 
-//   .warning {
-//     margin-top: 20px;
-//     color: red;
-//   }
-// }
+  .warning {
+    margin-top: 20px;
+    color: red;
+  }
+}
