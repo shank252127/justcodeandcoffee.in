@@ -564,24 +564,24 @@ body {
   display: none;
 }
 
-// @media screen and (max-width: 1024px) {
-//   .about-section {
-//     display: none;
-//   }
-//   .mobile-device-issue {
-//     display: block;
-//     margin: 10%;
-//     text-align: center;
+@media screen and (min-width: 599px) and (max-width: 1024px) {
+  .about-section {
+    display: none;
+  }
+  .mobile-device-issue {
+    display: block;
+    margin: 10%;
+    text-align: center;
 
-//     .mail {
-//       font-size: 16px;
-//       font-weight: 700;
-//       cursor: pointer;
-//     }
+    .mail {
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+    }
 
-//     .warning {
-//       margin-top: 20px;
-//       color: red;
-//     }
-//   }
-// }
+    .warning {
+      margin-top: 20px;
+      color: red;
+    }
+  }
+}
