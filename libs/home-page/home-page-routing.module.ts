@@ -3,6 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: '',
+    loadChildren: () =>
+      import('../about/about.module').then((m) => m.AboutModule),
+  },
+  {
     path: 'about',
     loadChildren: () =>
       import('../about/about.module').then((m) => m.AboutModule),
@@ -22,11 +27,8 @@ const routes: Routes = [
     loadChildren: () =>
       import('../contact/contact.module').then((m) => m.ContactModule),
   },
-  {
-    path: '',
-    redirectTo: 'about',
-    pathMatch: 'full',
-  },
+
+  { path: '**', redirectTo: 'about' },
 ];
 
 @NgModule({

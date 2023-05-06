@@ -70,7 +70,7 @@ export const ABOUT_DATA = {
       },
       {
         NAME: 'Infosys',
-        DURATION: 'Dec 2019 - SepT 2022',
+        DURATION: 'Dec 2019 - Sept 2022',
         DESIGNATION: 'Senior System Engineer',
         ROLE: 'FullStack Developer',
       },
