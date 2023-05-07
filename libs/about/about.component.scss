@@ -449,6 +449,111 @@ body {
   }
 }
 
+// Screen Type - Mobile View;
+@media screen and (max-width: $mobile-max-width) {
+  .about-section {
+    display: flex;
+    flex-direction: column;
+    margin: 36px 10px 0;
+    .home-intro {
+      flex-direction: column;
+      .home-intro-image {
+        margin-right: 0;
+        height: 15rem;
+        width: 15rem;
+        margin-bottom: 10px;
+      }
+      .home-intro-profile {
+        margin-top: 36px;
+        align-items: center;
+        text-align: center;
+        .designation {
+          line-height: 40.5px;
+        }
+        .social-option {
+          width: 60vw;
+          justify-content: space-between;
+          li {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    .tech {
+      margin: 36px 0;
+      .tech-heading {
+        line-height: 40.5px;
+      }
+      .tech-stack {
+        margin-top: 36px;
+        display: flex;
+        flex-direction: column;
+        .sub-heading {
+          margin-bottom: 18px;
+        }
+        .tech-list {
+          display: flex;
+          flex-wrap: wrap;
+          li {
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+    .ed-ex {
+      .contact {
+        padding: 0;
+        overflow: visible;
+        .content {
+          padding: 20px 20px 35px;
+          .about-me {
+            p {
+              letter-spacing: 0;
+            }
+          }
+          .btn-experience,
+          .btn-education {
+            width: 120px;
+            height: 42px;
+            margin-bottom: -16px;
+            span {
+              width: 120px;
+              padding: 0;
+            }
+            svg {
+              height: 30px;
+              width: 30px;
+            }
+          }
+          .btn-experience {
+            left: 8%;
+          }
+          .btn-education {
+            right: 35%;
+          }
+          .btn-education.active-education {
+            right: 7%;
+          }
+        }
+      }
+      .title {
+        p {
+          margin: 14px 14px 0;
+        }
+      }
+      .ed-ex-list {
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        margin-top: 0;
+        div {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
 /////warning
 .warning {
   margin: 10%;
@@ -459,7 +564,7 @@ body {
   display: none;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 599px) and (max-width: 1024px) {
   .about-section {
     display: none;
   }

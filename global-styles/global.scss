@@ -9,23 +9,29 @@ $about-profile-pic: "/assets/about-profile.png";
 $font-family-poppin: "Poppins";
 $font-family-sans-sarif: sans-serif;
 
-// Color
+// Color;
 $color-white: #ffffff;
 $color-black: #000000;
 $color-link: #0078d6;
 
-// Font-size
+// Font-size;
 $font-size-header: 1.5rem; //24px;
 $font-size-large: 1rem; //16px;
 $font-size-normal: 0.75rem; //12px;
 
-// Font-weight
+// Font-weight;
 $font-weight-extra-large: 700;
 $font-weight-large: 600;
 $font-weight-regular: 500;
 
-// Heights
+// Heights;
 $header-height: 56px;
 
 // Margin;
 $margin-dektop: 56px 48px;
+
+//MediaQuery ranges;
+$mobile-max-width: 599px;
+$tablet-max-width: 1024px;
+$tablet-min-width: 600px;
+$desktop-min-width: 1025px;
