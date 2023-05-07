@@ -5,9 +5,17 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomePageRoutingModule } from './home-page-routing.module';
 
+// Material UI;
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
 @NgModule({
   declarations: [LandingPageComponent, HeaderComponent, FooterComponent],
-  imports: [CommonModule, HomePageRoutingModule],
+  imports: [
+    CommonModule,
+    HomePageRoutingModule,
+    MatMenuModule,
+    MatButtonModule,
+  ],
   exports: [LandingPageComponent],
 })
 export class HomePageModule {}

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 //Feature Module;
 import { HomePageModule } from '../../libs/home-page/home-page.module';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 //External Libraries;
 
@@ -14,7 +15,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HomePageModule, //Home Page - Includes Header + Main Section + Footer,
+    HomePageModule,
+    BrowserAnimationsModule, //Home Page - Includes Header + Main Section + Footer,
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent],

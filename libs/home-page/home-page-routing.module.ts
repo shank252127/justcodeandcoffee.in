@@ -27,6 +27,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('../contact/contact.module').then((m) => m.ContactModule),
   },
+  {
+    path: 'projects',
+    loadChildren: () =>
+      import('../project/project.module').then((m) => m.ProjectModule),
+  },
 
   { path: '**', redirectTo: 'about' },
 ];

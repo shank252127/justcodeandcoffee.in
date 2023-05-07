@@ -1,7 +1,7 @@
 @import "global-styles/global.scss";
 
 .about-section {
-  max-width: 80rem;
+  max-width: $max-width;
   margin: 56px auto;
   font-family: $font-family-poppin, $font-family-sans-sarif;
   // Intro Section;

@@ -1,0 +1,26 @@
+<div class="project-json-formatter">
+    <div class="floor">
+        <div class="json-text-area">
+            <textarea name="json-area" [(ngModel)]="inputTextVal"
+                [placeholder]="jsonFormatterData.TEXT_BOX_PLACEHOLDER.INPUT_AREA"></textarea>
+        </div>
+
+        <div class="tab-mob-error erorr-block" *ngIf="errorInJson!==''">
+            <p>{{errorInJson}}</p>
+        </div>
+
+
+        <div class="button-area">
+            <button (click)="formatJson()">{{jsonFormatterData.BTN_FORMAT}}</button>
+            <button (click)="minifyJson()">{{jsonFormatterData.BTN_MINIFY}}</button>
+        </div>
+        <div class="formatter-area">
+            <textarea name="output-area" [(ngModel)]="formattedText"
+                [placeholder]="jsonFormatterData.TEXT_BOX_PLACEHOLDER.OUTPUT_AREA"></textarea>
+        </div>
+    </div>
+
+    <div class="desktop-error erorr-block" *ngIf="errorInJson!==''">
+        <p>{{errorInJson}}</p>
+    </div>
+</div>
