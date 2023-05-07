@@ -1,17 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { JSON_FORMATTER } from './json-formatter.config';
 
 @Component({
   selector: 'app-json-formatter',
   templateUrl: './json-formatter.component.html',
   styleUrls: ['./json-formatter.component.scss'],
 })
-export class JsonFormatterComponent implements OnInit {
-  formattedText: any = '';
-  inputText: any = '';
+export class JsonFormatterComponent {
+  jsonFormatterData = JSON_FORMATTER;
+  formattedText: string = '';
+  inputText: string = '';
   minifiedText: string = '';
   errorInJson: any;
-  constructor() {}
-  ngOnInit(): void {}
 
   get rapidPageValue() {
     return JSON.stringify(this.inputText, null, 2);
@@ -33,5 +33,8 @@ export class JsonFormatterComponent implements OnInit {
   formatJson(): void {
     this.formattedText = JSON.stringify(this.inputText, null, 4);
   }
-  minifyJson(): void {}
+
+  minifyJson(): void {
+    this.formattedText = JSON.stringify(this.inputText);
+  }
 }

@@ -53,6 +53,7 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.09);
         font-size: $font-size-normal;
         font-weight: $font-weight-large;
+        background-color: white;
       }
       button:hover {
         background-color: #f7b42c;
@@ -68,5 +69,37 @@
     font-size: $font-size-normal;
     font-weight: $font-weight-large;
     color: red;
+  }
+  // errors;
+  .desktop-error {
+    display: block;
+  }
+  .tab-mob-error {
+    display: none;
+  }
+}
+
+// Screen Type - Mobile View;
+@media screen and (max-width: $mobile-max-width) {
+  .project-json-formatter {
+    padding: 20px 10px;
+    height: calc(100vh - 96px);
+    .floor {
+      grid-template-columns: 1fr;
+      .button-area {
+        flex-direction: row;
+        justify-content: space-evenly;
+        button:hover {
+          width: auto;
+        }
+      }
+    }
+    // errors;
+    .tab-mob-error {
+      display: block;
+    }
+    .desktop-error {
+      display: none;
+    }
   }
 }
