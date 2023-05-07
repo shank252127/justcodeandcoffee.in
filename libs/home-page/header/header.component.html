@@ -21,23 +21,24 @@
         </li>
       </ul>
     </div>
-
+    <!-- Menu for Mobile and Tablet: Lib - Angular Material (MatMenuModule) -->
     <div class="mobile-tab-menu" *ngIf="mobTabStyleActive">
-      <!-- MATERIAL -->
-
-      <ul [matMenuTriggerFor]="animals" class="hamburger-menu" dir="rtl" (menuOpened)="openHamburger()"
+      <ul [matMenuTriggerFor]="menuList" class="hamburger-menu" dir="ltr" (menuOpened)="openHamburger()"
         (menuClosed)="openHamburger()" [ngClass]="{'hamburger-active':activeHamburger}">
         <li></li>
         <li></li>
         <li></li>
       </ul>
 
-      <mat-menu #animals="matMenu">
-        <button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
-        <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
+      <mat-menu #menuList="matMenu">
+        <button class="mobile-menu-option" mat-menu-item *ngFor="let menu of headerData.RIGHT_SIDE_MENU; let i = index">
+          <a href="#" [routerLink]="headerData.ROUTER_LINK[i]">
+            {{ menu }}
+          </a></button>
+        <!-- <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button> -->
       </mat-menu>
 
-      <mat-menu #vertebrates="matMenu">
+      <!-- <mat-menu #vertebrates="matMenu">
         <button mat-menu-item [matMenuTriggerFor]="fish">Fishes</button>
         <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
         <button mat-menu-item [matMenuTriggerFor]="reptiles">Reptiles</button>
@@ -76,7 +77,7 @@
         <button mat-menu-item>Black Tree Monitor</button>
         <button mat-menu-item>Blue Spiny Lizard</button>
         <button mat-menu-item disabled>Velociraptor</button>
-      </mat-menu>
+      </mat-menu> -->
     </div>
   </div>
 </nav>
