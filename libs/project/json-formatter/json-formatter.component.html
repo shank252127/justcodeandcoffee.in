@@ -1,0 +1,19 @@
+<div class="project-json-formatter">
+    <div class="floor">
+        <div class="json-text-area">
+            <textarea name="json-area" [(ngModel)]="inputTextVal" placeholder="Enter your JSON here ..."></textarea>
+        </div>
+        <div class="button-area">
+            <button (click)="formatJson()">Format</button>
+            <button (click)="minifyJson()">Minify</button>
+        </div>
+        <div class="formatter-area">
+            <textarea name="output-area" [(ngModel)]="formattedText"
+                placeholder="Your Json will appear here ..."></textarea>
+        </div>
+    </div>
+
+    <div class="erorr-block" *ngIf="errorInJson!==''">
+        <p>{{errorInJson}}</p>
+    </div>
+</div>
