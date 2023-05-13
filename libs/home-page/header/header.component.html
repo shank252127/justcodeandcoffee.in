@@ -14,11 +14,13 @@
     <div class="header-right-side desktop-menu" *ngIf="!mobTabStyleActive">
       <ul class="header-menu">
         <li class="header-options" *ngFor="let menu of headerData.RIGHT_SIDE_MENU; let i = index">
-          <a href="#" [routerLink]="menu.ROUTE_PATH" [matMenuTriggerFor]="menu.IS_NESTED ? nestedMenu : null"
+          <a href="#" *ngIf="!menu.IS_NESTED" [routerLink]="menu.ROUTE_PATH">
+            {{ menu.NAME }}
+          </a>
+          <a *ngIf="menu.IS_NESTED" [matMenuTriggerFor]="nestedMenu"
             (click)="setNestedMenuData(menu.IS_NESTED,menu.ID)">
             {{ menu.NAME }}
           </a>
-
         </li>
       </ul>
     </div>
@@ -38,8 +40,11 @@
           <button [dir]="dir" class="mobile-menu-option" mat-menu-item
             [matMenuTriggerFor]="menu.IS_NESTED ? nestedMenu : null"
             (click)="setNestedMenuData(menu.IS_NESTED,menu.ID)">
-            <a href="#" [routerLink]="menu.ROUTE_PATH">
-              {{ menu.NAME }} <i class="fa fa-search"></i>
+            <a href="#" *ngIf="!menu.IS_NESTED" [routerLink]="menu.ROUTE_PATH">
+              {{ menu.NAME }}
+            </a>
+            <a *ngIf="menu.IS_NESTED">
+              {{ menu.NAME }}
             </a>
           </button>
         </div>

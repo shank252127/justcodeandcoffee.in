@@ -28,7 +28,7 @@ const routes: Routes = [
       import('../contact/contact.module').then((m) => m.ContactModule),
   },
   {
-    path: 'projects',
+    path: 'jsonformater',
     loadChildren: () =>
       import('../project/project.module').then((m) => m.ProjectModule),
   },
