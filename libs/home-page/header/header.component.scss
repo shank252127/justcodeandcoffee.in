@@ -62,6 +62,9 @@
       }
     }
   }
+
+  .sub-menu {
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -169,8 +172,20 @@
     opacity: 0;
   }
 }
-
-.mobile-menu-option {
+// sub-menu
+.main-menu,
+.sub-menu {
+  button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+  }
+  img {
+    float: left;
+    width: 20px;
+    height: 20px;
+  }
   a {
     text-decoration: none;
     color: $color-black;
