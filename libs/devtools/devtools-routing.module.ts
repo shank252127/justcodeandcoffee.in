@@ -34,10 +34,6 @@ const routes: Routes = [
       },
     ],
   },
-  // {
-  //   path: 'devtools/jsonformater',
-  //   component: JsonFormatterComponent,
-  // },
 ];
 
 @NgModule({

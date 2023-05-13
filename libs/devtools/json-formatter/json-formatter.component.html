@@ -1,13 +1,27 @@
-<div class="project-json-formatter">
+<mat-accordion class="json-formatter-accordian" (click)="openAccordian()">
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                {{jsonFormatterData.HEADING}}
+            </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-panel-description>
+            {{jsonFormatterData.ABOUT_APP}}
+        </mat-panel-description>
+    </mat-expansion-panel>
+</mat-accordion>
+<div class="project-json-formatter" *ngIf="!accordianOpen">
     <div class="floor">
         <div class="json-text-area">
             <textarea name="json-area" [(ngModel)]="inputTextVal"
                 [placeholder]="jsonFormatterData.TEXT_BOX_PLACEHOLDER.INPUT_AREA"></textarea>
         </div>
+        <ng-container *ngIf="errorInJson!==''">
+            <div class="tab-mob-error erorr-block">
+                <p>{{errorInJson}}</p>
+            </div>
+        </ng-container>
 
-        <div class="tab-mob-error erorr-block" *ngIf="errorInJson!==''">
-            <p>{{errorInJson}}</p>
-        </div>
 
 
         <div class="button-area">

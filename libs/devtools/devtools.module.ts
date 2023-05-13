@@ -10,6 +10,8 @@ import { JsonFormatterComponent } from './json-formatter/json-formatter.componen
 
 import { FormsModule } from '@angular/forms';
 import { PhotoResizerComponent } from './photo-resizer/photo-resizer.component';
+
+import { MatExpansionModule } from '@angular/material/expansion';
 @NgModule({
   declarations: [
     MainComponent,
@@ -19,6 +21,11 @@ import { PhotoResizerComponent } from './photo-resizer/photo-resizer.component';
     JsonFormatterComponent,
     PhotoResizerComponent,
   ],
-  imports: [CommonModule, FormsModule, DevtoolsRoutingModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    DevtoolsRoutingModule,
+    MatExpansionModule,
+  ],
 })
 export class DevtoolsModule {}
