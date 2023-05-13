@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
-
+import { NavigationExtras, Router } from '@angular/router';
 // Constants
 import { HEADER_DATA } from '../configs/header.config';
 import { BREAKPOINT_VIEW } from 'global-styles/global-constants.config';
@@ -18,8 +18,12 @@ export class HeaderComponent implements OnInit {
   activeHamburger = false;
   dir: Direction = 'rtl';
   subMenu: any;
+  routerParameter: NavigationExtras;
 
-  constructor(public breakpointObserver: BreakpointObserver) {
+  constructor(
+    public breakpointObserver: BreakpointObserver,
+    private route: Router
+  ) {
     this.breakpointObserver
       .observe([BREAKPOINT_VIEW.TAB_MOB_BP])
       .subscribe((state: BreakpointState) => {
@@ -44,5 +48,15 @@ export class HeaderComponent implements OnInit {
       this.subMenu = [];
     }
     // console.log(this.menuData);
+  }
+
+  navigateTo(route) {
+    const data = { key: 'value' };
+    const extras: NavigationExtras = {
+      state: {
+        data,
+      },
+    };
+    this.route.navigate([route], extras);
   }
 }

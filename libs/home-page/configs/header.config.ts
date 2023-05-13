@@ -33,27 +33,27 @@ export const HEADER_DATA = {
     THREE: [
       {
         NAME: 'JSON Formatter',
-        ROUTE_PATH: 'jsonformater',
+        ROUTE_PATH: 'devtools/jsonformater',
         ICON: 'assets/json-formatter.svg',
       },
       {
         NAME: 'JSON Comp',
-        ROUTE_PATH: 'jsondiff',
+        ROUTE_PATH: 'devtools/jsoncomp',
         ICON: 'assets/json-comp.svg',
       },
       {
-        NAME: 'JSON to String',
-        ROUTE_PATH: 'jsontostrong',
+        NAME: 'JSON to Object',
+        ROUTE_PATH: 'devtools/jsontoobj',
         ICON: 'assets/string-compare.svg',
       },
       {
         NAME: 'String Comp',
-        ROUTE_PATH: 'stringdiff',
+        ROUTE_PATH: 'devtools/stringcomp',
         ICON: 'assets/string-comp.svg',
       },
       {
         NAME: 'Photo Resizer',
-        ROUTE_PATH: 'photoresizer',
+        ROUTE_PATH: 'devtools/photoresizer',
         ICON: 'assets/photo-resize.svg',
       },
     ],

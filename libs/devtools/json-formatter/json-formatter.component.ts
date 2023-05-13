@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { JSON_FORMATTER } from './json-formatter.config';
+import { JSON_FORMATTER } from '../config/json-formatter.config';
 
 @Component({
   selector: 'app-json-formatter',
