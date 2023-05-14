@@ -37,7 +37,7 @@
       <!-- Menu -->
       <mat-menu #menuList="matMenu">
         <div class="main-menu" *ngFor="let menu of headerData.RIGHT_SIDE_MENU; let i = index">
-          <button [dir]="dir" class="mobile-menu-option" mat-menu-item
+          <button [disabled]="menu.DISABLE" [dir]="dir" class="mobile-menu-option" mat-menu-item
             [matMenuTriggerFor]="menu.IS_NESTED ? nestedMenu : null"
             (click)="setNestedMenuData(menu.IS_NESTED,menu.ID)">
             <a href="#" *ngIf="!menu.IS_NESTED" [routerLink]="menu.ROUTE_PATH">
@@ -54,7 +54,7 @@
     <!-- Nested/Sub Menu -->
     <mat-menu #nestedMenu="matMenu" xPosition="before">
       <div class="sub-menu" *ngFor="let opt of subMenu">
-        <button mat-menu-item>
+        <button mat-menu-item [disabled]="opt.DISABLE">
           <img [src]="opt.ICON" alt="">
           <a href="#" [routerLink]="opt.ROUTE_PATH">
             {{opt.NAME}}
