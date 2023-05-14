@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { JSON_FORMATTER } from './json-formatter.config';
-
+import { Component, ViewChild } from '@angular/core';
+import { JSON_FORMATTER } from '../config/json-formatter.config';
+import { MatAccordion } from '@angular/material/expansion';
 @Component({
   selector: 'app-json-formatter',
   templateUrl: './json-formatter.component.html',
@@ -11,8 +11,9 @@ export class JsonFormatterComponent {
   formattedText: string = '';
   inputText: string = '';
   minifiedText: string = '';
-  errorInJson: any;
-
+  errorInJson = '';
+  accordianOpen = false;
+  @ViewChild(MatAccordion) accordion: MatAccordion;
   get rapidPageValue() {
     return JSON.stringify(this.inputText, null, 2);
   }
@@ -36,5 +37,9 @@ export class JsonFormatterComponent {
 
   minifyJson(): void {
     this.formattedText = JSON.stringify(this.inputText);
+  }
+
+  openAccordian(): void {
+    this.accordianOpen = !this.accordianOpen;
   }
 }

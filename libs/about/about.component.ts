@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ABOUT_DATA } from './configs/about.config';
-import { faFilm } from '@fortawesome/free-solid-svg-icons';
 import {
   faInstagramSquare,
   faGithub,

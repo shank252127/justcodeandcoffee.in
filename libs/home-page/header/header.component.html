@@ -2,7 +2,6 @@
   <div class="header">
     <!-- Left Hand Side -->
     <div class="header-left-side">
-
       <div class="header-logo">
         <img [src]="headerData.LEFT_SIDE_MENU.LOGO_IMG" alt="app logo" />
       </div>
@@ -10,74 +9,57 @@
         <span>{{ headerData.LEFT_SIDE_MENU.APP_TITLE }}</span>
       </div>
     </div>
-    <!-- Right Hand Side -->
 
+    <!-- Right Hand Side -->
     <div class="header-right-side desktop-menu" *ngIf="!mobTabStyleActive">
       <ul class="header-menu">
         <li class="header-options" *ngFor="let menu of headerData.RIGHT_SIDE_MENU; let i = index">
-          <a href="#" [routerLink]="headerData.ROUTER_LINK[i]">
-            {{ menu }}
+          <a href="#" *ngIf="!menu.IS_NESTED" [routerLink]="menu.ROUTE_PATH">
+            {{ menu.NAME }}
+          </a>
+          <a *ngIf="menu.IS_NESTED" [matMenuTriggerFor]="nestedMenu"
+            (click)="setNestedMenuData(menu.IS_NESTED,menu.ID)">
+            {{ menu.NAME }}
           </a>
         </li>
       </ul>
     </div>
+
     <!-- Menu for Mobile and Tablet: Lib - Angular Material (MatMenuModule) -->
     <div class="mobile-tab-menu" *ngIf="mobTabStyleActive">
+      <!-- Hamburger -->
       <ul [matMenuTriggerFor]="menuList" class="hamburger-menu" dir="ltr" (menuOpened)="openHamburger()"
         (menuClosed)="openHamburger()" [ngClass]="{'hamburger-active':activeHamburger}">
         <li></li>
         <li></li>
         <li></li>
       </ul>
-
+      <!-- Menu -->
       <mat-menu #menuList="matMenu">
-        <button class="mobile-menu-option" mat-menu-item *ngFor="let menu of headerData.RIGHT_SIDE_MENU; let i = index">
-          <a href="#" [routerLink]="headerData.ROUTER_LINK[i]">
-            {{ menu }}
-          </a></button>
-        <!-- <button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button> -->
+        <div class="main-menu" *ngFor="let menu of headerData.RIGHT_SIDE_MENU; let i = index">
+          <button [dir]="dir" class="mobile-menu-option" mat-menu-item
+            [matMenuTriggerFor]="menu.IS_NESTED ? nestedMenu : null"
+            (click)="setNestedMenuData(menu.IS_NESTED,menu.ID)">
+            <a href="#" *ngIf="!menu.IS_NESTED" [routerLink]="menu.ROUTE_PATH">
+              {{ menu.NAME }}
+            </a>
+            <a *ngIf="menu.IS_NESTED">
+              {{ menu.NAME }}
+            </a>
+          </button>
+        </div>
       </mat-menu>
-
-      <!-- <mat-menu #vertebrates="matMenu">
-        <button mat-menu-item [matMenuTriggerFor]="fish">Fishes</button>
-        <button mat-menu-item [matMenuTriggerFor]="amphibians">Amphibians</button>
-        <button mat-menu-item [matMenuTriggerFor]="reptiles">Reptiles</button>
-        <button mat-menu-item>Birds</button>
-        <button mat-menu-item>Mammals</button>
-      </mat-menu>
-
-      <mat-menu #invertebrates="matMenu">
-        <button mat-menu-item>Insects</button>
-        <button mat-menu-item>Molluscs</button>
-        <button mat-menu-item>Crustaceans</button>
-        <button mat-menu-item>Corals</button>
-        <button mat-menu-item>Arachnids</button>
-        <button mat-menu-item>Velvet worms</button>
-        <button mat-menu-item>Horseshoe crabs</button>
-      </mat-menu>
-
-      <mat-menu #fish="matMenu">
-        <button mat-menu-item>Baikal oilfish</button>
-        <button mat-menu-item>Bala shark</button>
-        <button mat-menu-item>Ballan wrasse</button>
-        <button mat-menu-item>Bamboo shark</button>
-        <button mat-menu-item>Banded killifish</button>
-      </mat-menu>
-
-      <mat-menu #amphibians="matMenu">
-        <button mat-menu-item>Sonoran desert toad</button>
-        <button mat-menu-item>Western toad</button>
-        <button mat-menu-item>Arroyo toad</button>
-        <button mat-menu-item>Yosemite toad</button>
-      </mat-menu>
-
-      <mat-menu #reptiles="matMenu">
-        <button mat-menu-item>Banded Day Gecko</button>
-        <button mat-menu-item>Banded Gila Monster</button>
-        <button mat-menu-item>Black Tree Monitor</button>
-        <button mat-menu-item>Blue Spiny Lizard</button>
-        <button mat-menu-item disabled>Velociraptor</button>
-      </mat-menu> -->
     </div>
+
+    <!-- Nested/Sub Menu -->
+    <mat-menu #nestedMenu="matMenu" xPosition="before">
+      <div class="sub-menu" *ngFor="let opt of subMenu">
+        <button mat-menu-item>
+          <img [src]="opt.ICON" alt="">
+          <a href="#" [routerLink]="opt.ROUTE_PATH">
+            {{opt.NAME}}
+          </a></button>
+      </div>
+    </mat-menu>
   </div>
 </nav>
